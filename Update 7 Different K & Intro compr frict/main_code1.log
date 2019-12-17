@@ -1,0 +1,4732 @@
+SPACAR Huge     version 17-Jun-2015 (0008/DP/C2000/D700/E600/I40/O40).
+(c) Laboratory of Mechanical Automation, University of Twente &
+    Department of Engineering Mechanics, Delft University of Technology
+
+================================================================================
+ Kinematic data
+
+ PLBEAM 1 1 2 3 4
+ PLBEAM 2 3 4 5 6
+ PLBEAM 3 5 6 7 8
+ PLBEAM 4 7 8 9 10
+ PLBEAM 5 9 10 11 12
+  
+ PLBEAM 6 13 14 15 16
+ PLBEAM 7 15 16 17 18
+ PLBEAM 8 17 18 19 20
+ PLBEAM 9 19 20 21 22
+ PLBEAM 10 21 22 23 24
+  
+ X 1 0.25 0
+ X 3 0.3 -0.005
+ X 5 0.35 -0.010
+ X 7 0.4 -0.015
+ X 9 0.45 -0.020
+ X 11 0.5 -0.025
+  
+ X 13 0.5 -1.0
+ X 15 0.75 -1.0
+ X 17 1.0 -1.0
+ X 19 1.25 -1.0
+ X 21 1.5 -1.0
+ X 23 1.75 -1.0
+  
+ FIX 2
+ FIX 13
+ FIX 23
+  
+ INPUTX 1
+  
+ DYNE 1 2 3
+ DYNE 2 2 3
+ DYNE 3 2 3
+ DYNE 4 2 3
+ DYNE 5 2 3
+ DYNE 6 1 2 3
+ DYNE 7 1 2 3
+ DYNE 8 1 2 3
+ DYNE 9 1 2 3
+ DYNE 10 2 3
+ RLSE 10 1
+  
+  
+ END
+
+ Elements used in this model:
+    No  Type         Element nodes          Deformation parameters (with type)    Max.def.par.
+   --- -------- ----------------------- ----------------------------------------------- -----
+     1 Plbeam     1   2   3   4           1-O   6-M   7-M                                   3
+     2 Plbeam     3   4   5   6           2-O   8-M   9-M                                   3
+     3 Plbeam     5   6   7   8           3-O  10-M  11-M                                   3
+     4 Plbeam     7   8   9  10           4-O  12-M  13-M                                   3
+     5 Plbeam     9  10  11  12           5-O  14-M  15-M                                   3
+     6 Plbeam    13  14  15  16          16-M  17-M  18-M                                   3
+     7 Plbeam    15  16  17  18          19-M  20-M  21-M                                   3
+     8 Plbeam    17  18  19  20          22-M  23-M  24-M                                   3
+     9 Plbeam    19  20  21  22          25-M  26-M  27-M                                   3
+    10 Plbeam    21  22  23  24          30-C  28-M  29-M                                   3
+   --- -------- ----------------------- ----------------------------------------------- -----
+
+ Bending-linked elongation calculated for beam(s):   1   2   3   4   5   6   7   8   9  10
+
+ Nodal point information
+  Node   Pos.pars (with type)    Values
+  ---- ----------------------- -----------------------------------------------
+     1  35-M  36-M                 0.25000     0.00000                        
+     2   1-O                       0.00000                                    
+     3   6-C   7-C                 0.30000    -0.00500                        
+     4   8-C                       0.00000                                    
+     5   9-C  10-C                 0.35000    -0.01000                        
+     6  11-C                       0.00000                                    
+     7  12-C  13-C                 0.40000    -0.01500                        
+     8  14-C                       0.00000                                    
+     9  15-C  16-C                 0.45000    -0.02000                        
+    10  17-C                       0.00000                                    
+    11  18-C  19-C                 0.50000    -0.02500                        
+    12  20-C                       0.00000                                    
+    13   2-O   3-O                 0.50000    -1.00000                        
+    14  21-C                       0.00000                                    
+    15  22-C  23-C                 0.75000    -1.00000                        
+    16  24-C                       0.00000                                    
+    17  25-C  26-C                 1.00000    -1.00000                        
+    18  27-C                       0.00000                                    
+    19  28-C  29-C                 1.25000    -1.00000                        
+    20  30-C                       0.00000                                    
+    21  31-C  32-C                 1.50000    -1.00000                        
+    22  33-C                       0.00000                                    
+    23   4-O   5-O                 1.75000    -1.00000                        
+    24  34-C                       0.00000                                    
+  ---- ----------------------- -----------------------------------------------
+
+ Degree of freedom information:
+   DOF PosPar DefPar Type     
+   --- ------ ------ ---------
+     1     35        Input    
+     2     36        Input    
+     3             6 -Dynamic 
+     4             7 -Dynamic 
+     5             8 -Dynamic 
+     6             9 -Dynamic 
+     7            10 -Dynamic 
+     8            11 -Dynamic 
+     9            12 -Dynamic 
+    10            13 -Dynamic 
+    11            14 -Dynamic 
+    12            15 -Dynamic 
+    13            16 -Dynamic 
+    14            17 -Dynamic 
+    15            18 -Dynamic 
+    16            19 -Dynamic 
+    17            20 -Dynamic 
+    18            21 -Dynamic 
+    19            22 -Dynamic 
+    20            23 -Dynamic 
+    21            24 -Dynamic 
+    22            25 -Dynamic 
+    23            26 -Dynamic 
+    24            27 -Dynamic 
+    25            28 -Dynamic 
+    26            29 -Dynamic 
+   --- ------ ------ ---------
+ Condition number of Dcc:  0.2702E+03
+
+ Zero order transfer function position parameters
+  0.00000E+00  5.00000E-01 -1.00000E+00  1.75000E+00 -1.00000E+00  3.00000E-01
+ -5.00000E-03  0.00000E+00  3.50000E-01 -1.00000E-02  0.00000E+00  4.00000E-01
+ -1.50000E-02  0.00000E+00  4.50000E-01 -2.00000E-02  0.00000E+00  5.00000E-01
+ -2.50000E-02  0.00000E+00  0.00000E+00  7.50000E-01 -1.00000E+00  0.00000E+00
+  1.00000E+00 -1.00000E+00  0.00000E+00  1.25000E+00 -1.00000E+00  0.00000E+00
+  1.50000E+00 -1.00000E+00  0.00000E+00  0.00000E+00  2.50000E-01  0.00000E+00
+
+
+ Zero order transfer function deformation parameters
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+
+================================================================================
+ Dynamic data
+
+ HALT
+ EM 1 0.001532   0.00000000002393
+ EM 2 0.001532   0.00000000002393
+ EM 3 0.001532   0.00000000002393
+ EM 4 0.001532   0.00000000002393
+ EM 5 0.001532   0.00000000002393
+ EM 6 0.001532   0.00000000002393
+ EM 7 0.001532   0.00000000002393
+ EM 8 0.001532   0.00000000002393
+ EM 9 0.001532   0.00000000002393
+ EM 10 0.001532   0.00000000002393
+  
+  
+ ESTIFF 1 69300  0.003614
+ ESTIFF 2 69300  0.003614
+ ESTIFF 3 69300  0.003614
+ ESTIFF 4 69300  0.003614
+ ESTIFF 5 69300  0.003614
+ ESTIFF 6 59300  0.003614
+ ESTIFF 7 59300  0.003614
+ ESTIFF 8 59300  0.003614
+ ESTIFF 9 59300  0.003614
+ ESTIFF 10 59300  0.003614
+  
+  
+ EDAMP 1 0.0001 0.00001
+ EDAMP 2 0.0001 0.00001
+ EDAMP 3 0.0001 0.00001
+ EDAMP 4 0.0001 0.00001
+ EDAMP 5 0.0001 0.00001
+ EDAMP 6 0.0001 0.00001
+ EDAMP 7 0.0001 0.00001
+ EDAMP 8 0.0001 0.00001
+ EDAMP 9 0.0001 0.00001
+ EDAMP 10 0.0001 0.00001
+  
+  
+ INPUTX 1 1 0 .5 0
+ INPUTX 1 2 0 -.1 0
+  
+ USERSIG CIRC_POT
+ USERSIG CIRC_POT
+ TIMESTEP 3 15000
+  
+ %STARTDE 1 1 0 0
+ STARTDE 1 2 0 0
+ STARTDE 1 3 0 0
+ %STARTDE 2 1 0 0
+ STARTDE 2 2 0 0
+ STARTDE 2 3 0 0
+ %STARTDE 3 1 0 0
+ STARTDE 3 2 0 0
+ STARTDE 3 3 0 0
+ %STARTDE 4 1 0 0
+ STARTDE 4 2 0 0
+ STARTDE 4 3 0 0
+ %STARTDE 5 1 0 0
+ STARTDE 5 2 0 0
+ STARTDE 5 3 0 0
+ %STARTDE 6 1 0 0
+ STARTDE 6 2 0 0
+ STARTDE 6 3 0 0
+ %STARTDE 7 1 0 0
+ STARTDE 7 2 0 0
+ STARTDE 7 3 0 0
+ %STARTDE 8 1 0 0
+ STARTDE 8 2 0 0
+ STARTDE 8 3 0 0
+ %STARTDE 9 1 0 0
+ STARTDE 9 2 0 0
+ STARTDE 9 3 0 0
+ %STARTDE 10 1 0 0
+ STARTDE 10 2 0 0
+ STARTDE 10 3 0 0
+  
+  
+ END
+
+ NEO =    5, NEMM =    5, NEM =   29, NEC =   30.
+
+ NXO =    5, NXC =   34, NXMM =   36, NXM =   36.
+ WITHOUT EULER ELEMENTS, ACCORDING TO THE GRAPHICAL USER INTERFACE
+ NX  =   36, NEO  =    5, NXO =    5, NDOF=   26.
+ GRAVITY:   0.00000E+00  0.00000E+00  0.00000E+00
+
+ Element data (showing only non-zero values):
+    No Type     (K) Stiffness, (D) Damping, (M) Element mass, (S) Pre-stress
+   --- -------- -------------------------------------------------------------
+     1 Plbeam   K    0.13791E+07    0.28484E+02    0              0          
+                D    0.19901E-02    0.78815E-01    0              0          
+                M    0.15320E-02
+     2 Plbeam   K    0.13791E+07    0.28484E+02    0              0          
+                D    0.19901E-02    0.78815E-01    0              0          
+                M    0.15320E-02
+     3 Plbeam   K    0.13791E+07    0.28484E+02    0              0          
+                D    0.19901E-02    0.78815E-01    0              0          
+                M    0.15320E-02
+     4 Plbeam   K    0.13791E+07    0.28484E+02    0              0          
+                D    0.19901E-02    0.78815E-01    0              0          
+                M    0.15320E-02
+     5 Plbeam   K    0.13791E+07    0.28484E+02    0              0          
+                D    0.19901E-02    0.78815E-01    0              0          
+                M    0.15320E-02
+     6 Plbeam   K    0.23720E+06    0.23130E+00    0              0          
+                D    0.40000E-03    0.64000E-03    0              0          
+                M    0.15320E-02
+     7 Plbeam   K    0.23720E+06    0.23130E+00    0              0          
+                D    0.40000E-03    0.64000E-03    0              0          
+                M    0.15320E-02
+     8 Plbeam   K    0.23720E+06    0.23130E+00    0              0          
+                D    0.40000E-03    0.64000E-03    0              0          
+                M    0.15320E-02
+     9 Plbeam   K    0.23720E+06    0.23130E+00    0              0          
+                D    0.40000E-03    0.64000E-03    0              0          
+                M    0.15320E-02
+    10 Plbeam   K    0.23720E+06    0.23130E+00    0              0          
+                D    0.40000E-03    0.64000E-03    0              0          
+                M    0.15320E-02
+   --- -------- -------------------------------------------------------------
+
+ Nodal point forces
+  Node  Pos.par / value pairs
+  ---- ------------------------------------------------------------------------
+     1  35:  0            36:  0                                              
+     2   1:  0                                                                
+     3   6:  0             7:  0                                              
+     4   8:  0                                                                
+     5   9:  0            10:  0                                              
+     6  11:  0                                                                
+     7  12:  0            13:  0                                              
+     8  14:  0                                                                
+     9  15:  0            16:  0                                              
+    10  17:  0                                                                
+    11  18:  0            19:  0                                              
+    12  20:  0                                                                
+    13   2:  0             3:  0                                              
+    14  21:  0                                                                
+    15  22:  0            23:  0                                              
+    16  24:  0                                                                
+    17  25:  0            26:  0                                              
+    18  27:  0                                                                
+    19  28:  0            29:  0                                              
+    20  30:  0                                                                
+    21  31:  0            32:  0                                              
+    22  33:  0                                                                
+    23   4:  0             5:  0                                              
+    24  34:  0                                                                
+  ---- ------------------------------------------------------------------------
+
+ Nodal point mass
+  Node  Value 1           2           3           4           5           6   
+  ---- -----------------------------------------------------------------------
+     1  0           0           0           0           0           0         
+     2  0.6012E-12  0           0           0           0           0         
+     3  0           0           0           0           0           0         
+     4  0.1202E-11  0           0           0           0           0         
+     5  0           0           0           0           0           0         
+     6  0.1202E-11  0           0           0           0           0         
+     7  0           0           0           0           0           0         
+     8  0.1202E-11  0           0           0           0           0         
+     9  0           0           0           0           0           0         
+    10  0.1202E-11  0           0           0           0           0         
+    11  0           0           0           0           0           0         
+    12  0.6012E-12  0           0           0           0           0         
+    13  0           0           0           0           0           0         
+    14  0.2991E-11  0           0           0           0           0         
+    15  0           0           0           0           0           0         
+    16  0.5982E-11  0           0           0           0           0         
+    17  0           0           0           0           0           0         
+    18  0.5982E-11  0           0           0           0           0         
+    19  0           0           0           0           0           0         
+    20  0.5982E-11  0           0           0           0           0         
+    21  0           0           0           0           0           0         
+    22  0.5982E-11  0           0           0           0           0         
+    23  0           0           0           0           0           0         
+    24  0.2991E-11  0           0           0           0           0         
+  ---- -----------------------------------------------------------------------
+
+ Nodal point gyro
+  Node  Value 1           2           3           4           5   
+  ---- -----------------------------------------------------------
+     1  0           0           0           0           0         
+     2  0           0           0           0           0         
+     3  0           0           0           0           0         
+     4  0           0           0           0           0         
+     5  0           0           0           0           0         
+     6  0           0           0           0           0         
+     7  0           0           0           0           0         
+     8  0           0           0           0           0         
+     9  0           0           0           0           0         
+    10  0           0           0           0           0         
+    11  0           0           0           0           0         
+    12  0           0           0           0           0         
+    13  0           0           0           0           0         
+    14  0           0           0           0           0         
+    15  0           0           0           0           0         
+    16  0           0           0           0           0         
+    17  0           0           0           0           0         
+    18  0           0           0           0           0         
+    19  0           0           0           0           0         
+    20  0           0           0           0           0         
+    21  0           0           0           0           0         
+    22  0           0           0           0           0         
+    23  0           0           0           0           0         
+    24  0           0           0           0           0         
+  ---- -----------------------------------------------------------
+
+ Total mass of the system =   0.2299910E-02
+================================================================================
+
+ Zero order transfer function position parameters
+  0.00000E+00  5.00000E-01 -1.00000E+00  1.75000E+00 -1.00000E+00  5.00000E-02
+ -5.00000E-03  0.00000E+00  1.00000E-01 -1.00000E-02  0.00000E+00  1.50000E-01
+ -1.50000E-02  0.00000E+00  2.00000E-01 -2.00000E-02  0.00000E+00  2.50000E-01
+ -2.50000E-02  0.00000E+00  0.00000E+00  7.50000E-01 -1.00000E+00  0.00000E+00
+  1.00000E+00 -1.00000E+00  0.00000E+00  1.25000E+00 -1.00000E+00  0.00000E+00
+  1.50000E+00 -1.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+
+
+ Zero order transfer function deformation parameters
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+
+================================================================================
+ Starting integration method "Shampine-Gordon"
+ With tolerances: Absolute  0.100E-04 and relative  0.100E-03.
+ Time =       0.00000000  total FE          0  delta fe     0
+ Time =       0.00020000  total FE          4  delta fe     4
+ Time =       0.00040000  total FE          7  delta fe     3
+ Time =       0.00060000  total FE          8  delta fe     1
+ Time =       0.00080000  total FE         12  delta fe     4
+ Time =       0.00100000  total FE         13  delta fe     1
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00120000  total FE       1009  delta fe   996
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00140000  total FE       1992  delta fe   983
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00160000  total FE       2927  delta fe   935
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00180000  total FE       3891  delta fe   964
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00200000  total FE       4832  delta fe   941
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00220000  total FE       5789  delta fe   957
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00240000  total FE       6756  delta fe   967
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00260000  total FE       7728  delta fe   972
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00280000  total FE       8697  delta fe   969
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00300000  total FE       9686  delta fe   989
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00320000  total FE      10643  delta fe   957
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00340000  total FE      11606  delta fe   963
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00360000  total FE      12612  delta fe  1006
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.00380000  total FE      13564  delta fe   952
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00400000  total FE      14542  delta fe   978
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00420000  total FE      15493  delta fe   951
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00440000  total FE      16434  delta fe   941
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00460000  total FE      17396  delta fe   962
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00480000  total FE      18374  delta fe   978
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00500000  total FE      19368  delta fe   994
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00520000  total FE      20301  delta fe   933
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00540000  total FE      21209  delta fe   908
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00560000  total FE      22128  delta fe   919
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.00580000  total FE      23118  delta fe   990
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00600000  total FE      24051  delta fe   933
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00620000  total FE      25109  delta fe  1058
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00640000  total FE      26055  delta fe   946
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00660000  total FE      27020  delta fe   965
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00680000  total FE      27976  delta fe   956
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.00700000  total FE      28957  delta fe   981
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00720000  total FE      29902  delta fe   945
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00740000  total FE      30874  delta fe   972
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00760000  total FE      31857  delta fe   983
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00780000  total FE      32807  delta fe   950
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00800000  total FE      33785  delta fe   978
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00820000  total FE      34757  delta fe   972
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00840000  total FE      35722  delta fe   965
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00860000  total FE      36688  delta fe   966
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00880000  total FE      37643  delta fe   955
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00900000  total FE      38592  delta fe   949
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00920000  total FE      39553  delta fe   961
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.00940000  total FE      40493  delta fe   940
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00960000  total FE      41457  delta fe   964
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00980000  total FE      42390  delta fe   933
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01000000  total FE      43311  delta fe   921
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.01020000  total FE      44237  delta fe   926
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01040000  total FE      45179  delta fe   942
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01060000  total FE      46099  delta fe   920
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01080000  total FE      47057  delta fe   958
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01100000  total FE      48044  delta fe   987
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.01120000  total FE      48997  delta fe   953
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01140000  total FE      50018  delta fe  1021
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01160000  total FE      50979  delta fe   961
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01180000  total FE      51953  delta fe   974
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01200000  total FE      52935  delta fe   982
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01220000  total FE      53903  delta fe   968
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01240000  total FE      54866  delta fe   963
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01260000  total FE      55838  delta fe   972
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01280000  total FE      56786  delta fe   948
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01300000  total FE      57739  delta fe   953
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01320000  total FE      58680  delta fe   941
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01340000  total FE      59608  delta fe   928
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01360000  total FE      60604  delta fe   996
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01380000  total FE      61606  delta fe  1002
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01400000  total FE      62591  delta fe   985
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01420000  total FE      63568  delta fe   977
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01440000  total FE      64525  delta fe   957
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01460000  total FE      65475  delta fe   950
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01480000  total FE      66426  delta fe   951
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01500000  total FE      67429  delta fe  1003
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01520000  total FE      68383  delta fe   954
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01540000  total FE      69351  delta fe   968
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01560000  total FE      70325  delta fe   974
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01580000  total FE      71265  delta fe   940
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01600000  total FE      72237  delta fe   972
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01620000  total FE      73227  delta fe   990
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01640000  total FE      74164  delta fe   937
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.01660000  total FE      75090  delta fe   926
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01680000  total FE      76016  delta fe   926
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.01700000  total FE      76993  delta fe   977
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01720000  total FE      77953  delta fe   960
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01740000  total FE      78907  delta fe   954
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01760000  total FE      79860  delta fe   953
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01780000  total FE      80858  delta fe   998
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01800000  total FE      81836  delta fe   978
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01820000  total FE      82819  delta fe   983
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01840000  total FE      83797  delta fe   978
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01860000  total FE      84790  delta fe   993
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01880000  total FE      85738  delta fe   948
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.01900000  total FE      86679  delta fe   941
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.01920000  total FE      87621  delta fe   942
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01940000  total FE      88611  delta fe   990
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01960000  total FE      89585  delta fe   974
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.01980000  total FE      90533  delta fe   948
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02000000  total FE      91493  delta fe   960
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02020000  total FE      92477  delta fe   984
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02040000  total FE      93429  delta fe   952
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02060000  total FE      94388  delta fe   959
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02080000  total FE      95345  delta fe   957
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02100000  total FE      96352  delta fe  1007
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02120000  total FE      97290  delta fe   938
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02140000  total FE      98263  delta fe   973
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02160000  total FE      99189  delta fe   926
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02180000  total FE     100189  delta fe  1000
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02200000  total FE     101143  delta fe   954
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02220000  total FE     102082  delta fe   939
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.02240000  total FE     103019  delta fe   937
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02260000  total FE     103993  delta fe   974
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02280000  total FE     104940  delta fe   947
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02300000  total FE     105901  delta fe   961
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02320000  total FE     106818  delta fe   917
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02340000  total FE     107783  delta fe   965
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02360000  total FE     108775  delta fe   992
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02380000  total FE     109780  delta fe  1005
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02400000  total FE     110761  delta fe   981
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02420000  total FE     111729  delta fe   968
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02440000  total FE     112743  delta fe  1014
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02460000  total FE     113710  delta fe   967
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02480000  total FE     114654  delta fe   944
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02500000  total FE     115600  delta fe   946
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02520000  total FE     116593  delta fe   993
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.02540000  total FE     117529  delta fe   936
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02560000  total FE     118517  delta fe   988
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02580000  total FE     119503  delta fe   986
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02600000  total FE     120437  delta fe   934
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02620000  total FE     121368  delta fe   931
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02640000  total FE     122326  delta fe   958
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02660000  total FE     123257  delta fe   931
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02680000  total FE     124219  delta fe   962
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02700000  total FE     125153  delta fe   934
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.02720000  total FE     126060  delta fe   907
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02740000  total FE     127027  delta fe   967
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02760000  total FE     127994  delta fe   967
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02780000  total FE     128941  delta fe   947
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02800000  total FE     129890  delta fe   949
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02820000  total FE     130835  delta fe   945
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02840000  total FE     131844  delta fe  1009
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02860000  total FE     132786  delta fe   942
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02880000  total FE     133728  delta fe   942
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02900000  total FE     134692  delta fe   964
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02920000  total FE     135667  delta fe   975
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02940000  total FE     136645  delta fe   978
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02960000  total FE     137638  delta fe   993
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02980000  total FE     138627  delta fe   989
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03000000  total FE     139576  delta fe   949
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03020000  total FE     140533  delta fe   957
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03040000  total FE     141477  delta fe   944
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.03060000  total FE     142399  delta fe   922
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03080000  total FE     143358  delta fe   959
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.03100000  total FE     144313  delta fe   955
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.03120000  total FE     145241  delta fe   928
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03140000  total FE     146218  delta fe   977
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03160000  total FE     147178  delta fe   960
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03180000  total FE     148170  delta fe   992
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03200000  total FE     149142  delta fe   972
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03220000  total FE     150136  delta fe   994
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03240000  total FE     151073  delta fe   937
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03260000  total FE     152055  delta fe   982
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03280000  total FE     152989  delta fe   934
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.03300000  total FE     153947  delta fe   958
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03320000  total FE     154911  delta fe   964
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03340000  total FE     155874  delta fe   963
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03360000  total FE     156808  delta fe   934
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03380000  total FE     157752  delta fe   944
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03400000  total FE     158728  delta fe   976
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03420000  total FE     159704  delta fe   976
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03440000  total FE     160661  delta fe   957
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03460000  total FE     161619  delta fe   958
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03480000  total FE     162617  delta fe   998
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.03500000  total FE     163541  delta fe   924
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03520000  total FE     164504  delta fe   963
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03540000  total FE     165471  delta fe   967
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03560000  total FE     166426  delta fe   955
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03580000  total FE     167391  delta fe   965
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03600000  total FE     168345  delta fe   954
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03620000  total FE     169310  delta fe   965
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03640000  total FE     170302  delta fe   992
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03660000  total FE     171271  delta fe   969
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03680000  total FE     172179  delta fe   908
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03700000  total FE     173138  delta fe   959
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03720000  total FE     174104  delta fe   966
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03740000  total FE     175056  delta fe   952
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03760000  total FE     176011  delta fe   955
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03780000  total FE     176957  delta fe   946
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.03800000  total FE     177867  delta fe   910
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03820000  total FE     178789  delta fe   922
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03840000  total FE     179714  delta fe   925
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03860000  total FE     180696  delta fe   982
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03880000  total FE     181640  delta fe   944
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03900000  total FE     182601  delta fe   961
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03920000  total FE     183552  delta fe   951
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03940000  total FE     184520  delta fe   968
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.03960000  total FE     185472  delta fe   952
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03980000  total FE     186431  delta fe   959
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04000000  total FE     187397  delta fe   966
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04020000  total FE     188346  delta fe   949
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04040000  total FE     189315  delta fe   969
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04060000  total FE     190314  delta fe   999
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04080000  total FE     191260  delta fe   946
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04100000  total FE     192234  delta fe   974
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04120000  total FE     193169  delta fe   935
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04140000  total FE     194109  delta fe   940
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04160000  total FE     195056  delta fe   947
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04180000  total FE     195984  delta fe   928
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.04200000  total FE     196953  delta fe   969
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04220000  total FE     197911  delta fe   958
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04240000  total FE     198868  delta fe   957
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04260000  total FE     199812  delta fe   944
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04280000  total FE     200827  delta fe  1015
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04300000  total FE     201769  delta fe   942
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04320000  total FE     202738  delta fe   969
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04340000  total FE     203718  delta fe   980
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04360000  total FE     204701  delta fe   983
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.04380000  total FE     205662  delta fe   961
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04400000  total FE     206646  delta fe   984
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04420000  total FE     207653  delta fe  1007
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04440000  total FE     208611  delta fe   958
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04460000  total FE     209539  delta fe   928
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04480000  total FE     210499  delta fe   960
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04500000  total FE     211473  delta fe   974
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04520000  total FE     212410  delta fe   937
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04540000  total FE     213381  delta fe   971
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04560000  total FE     214375  delta fe   994
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04580000  total FE     215334  delta fe   959
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04600000  total FE     216306  delta fe   972
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.04620000  total FE     217223  delta fe   917
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04640000  total FE     218223  delta fe  1000
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.04660000  total FE     219170  delta fe   947
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04680000  total FE     220130  delta fe   960
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04700000  total FE     221083  delta fe   953
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04720000  total FE     222032  delta fe   949
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04740000  total FE     222972  delta fe   940
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04760000  total FE     223942  delta fe   970
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04780000  total FE     224903  delta fe   961
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04800000  total FE     225842  delta fe   939
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04820000  total FE     226792  delta fe   950
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04840000  total FE     227761  delta fe   969
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04860000  total FE     228726  delta fe   965
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04880000  total FE     229656  delta fe   930
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04900000  total FE     230689  delta fe  1033
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04920000  total FE     231649  delta fe   960
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04940000  total FE     232657  delta fe  1008
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.04960000  total FE     233569  delta fe   912
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04980000  total FE     234530  delta fe   961
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.05000000  total FE     235480  delta fe   950
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.05020000  total FE     236407  delta fe   927
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.05040000  total FE     237360  delta fe   953
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.05060000  total FE     238311  delta fe   951
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+

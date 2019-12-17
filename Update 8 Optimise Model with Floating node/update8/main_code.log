@@ -1,0 +1,449 @@
+SPACAR Huge     version 17-Jun-2015 (0008/DP/C2000/D700/E600/I40/O40).
+(c) Laboratory of Mechanical Automation, University of Twente &
+    Department of Engineering Mechanics, Delft University of Technology
+
+================================================================================
+ Kinematic data
+
+ PLBEAM 1 1 2 3 4
+ PLBEAM 2 5 6 7 8
+ PLBEAM 3 7 8 9 10
+ PLBEAM 4 9 10 11 12
+  
+ #PLBEAM 6 13 14 15 16
+ #PLBEAM 7 15 16 17 18
+  
+ X 1 0.5 0
+ X 3 0.5 -0.50
+ #X 5 0.5 -0.10
+  
+  
+ X 5 0.0 -1.2
+ X 7 0.33 -1.2
+ X 9 0.66 -1.2
+ X 11 1.0 -1.2
+ #X 17 1.0 -1.0
+  
+  
+ FIX 2
+ FIX 5
+ FIX 11
+  
+ INPUTX 1
+  
+ DYNE 1 2 3
+ #DYNE 2 2 3
+  
+ #DYNE 6 1 2 3
+ DYNE 2 1 2 3
+ DYNE 3 1 2 3
+ DYNE 4 2 3
+ RLSE 4 1
+ #DYNE 10 2 3
+ #RLSE 10 1
+  
+  
+ END
+
+ Elements used in this model:
+    No  Type         Element nodes          Deformation parameters (with type)    Max.def.par.
+   --- -------- ----------------------- ----------------------------------------------- -----
+     1 Plbeam     1   2   3   4           1-O   2-M   3-M                                   3
+     2 Plbeam     5   6   7   8           4-M   5-M   6-M                                   3
+     3 Plbeam     7   8   9  10           7-M   8-M   9-M                                   3
+     4 Plbeam     9  10  11  12          12-C  10-M  11-M                                   3
+   --- -------- ----------------------- ----------------------------------------------- -----
+
+ Bending-linked elongation calculated for beam(s):   1   2   3   4
+
+ Nodal point information
+  Node   Pos.pars (with type)    Values
+  ---- ----------------------- -----------------------------------------------
+     1  17-M  18-M                 0.50000     0.00000                        
+     2   1-O                       0.00000                                    
+     3   6-C   7-C                 0.50000    -0.50000                        
+     4   8-C                       0.00000                                    
+     5   2-O   3-O                 0.00000    -1.20000                        
+     6   9-C                       0.00000                                    
+     7  10-C  11-C                 0.33000    -1.20000                        
+     8  12-C                       0.00000                                    
+     9  13-C  14-C                 0.66000    -1.20000                        
+    10  15-C                       0.00000                                    
+    11   4-O   5-O                 1.00000    -1.20000                        
+    12  16-C                       0.00000                                    
+  ---- ----------------------- -----------------------------------------------
+
+ Degree of freedom information:
+   DOF PosPar DefPar Type     
+   --- ------ ------ ---------
+     1     17        Input    
+     2     18        Input    
+     3             2 -Dynamic 
+     4             3 -Dynamic 
+     5             4 -Dynamic 
+     6             5 -Dynamic 
+     7             6 -Dynamic 
+     8             7 -Dynamic 
+     9             8 -Dynamic 
+    10             9 -Dynamic 
+    11            10 -Dynamic 
+    12            11 -Dynamic 
+   --- ------ ------ ---------
+ Condition number of Dcc:  0.1399E+02
+
+ Zero order transfer function position parameters
+  0.00000E+00  0.00000E+00 -1.20000E+00  1.00000E+00 -1.20000E+00  5.00000E-01
+ -5.00000E-01  0.00000E+00  0.00000E+00  3.30000E-01 -1.20000E+00  0.00000E+00
+  6.60000E-01 -1.20000E+00  0.00000E+00  0.00000E+00  5.00000E-01  0.00000E+00
+
+
+ Zero order transfer function deformation parameters
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+
+================================================================================
+ Dynamic data
+
+ HALT
+ EM 1 0.001532   0.00000000002393
+ EM 2 0.001532   0.00000000002393
+ EM 3 0.001532   0.00000000002393
+ EM 4 0.001532   0.00000000002393
+ #EM 6 0.001532   0.00000000002393
+ #EM 7 0.001532   0.00000000002393
+  
+  
+  
+ ESTIFF 1 6930  0.003614
+ ESTIFF 2 6930  0.003614
+  
+ ESTIFF 3 6300  0.003614
+ ESTIFF 4 6300  0.003614
+  
+  
+  
+ EDAMP 1 0.001 0.001
+ EDAMP 2 0.001 0.001
+  
+ EDAMP 3 0.001 0.001
+ EDAMP 4 0.001 0.001
+  
+  
+  
+ INPUTX 1 1 0.5 0 0
+ INPUTX 1 2 0 0 0
+  
+ USERSIG CIRC_POT
+ USERSIG CIRC_POT
+ TIMESTEP 1 200
+  
+ STARTDE 1 1 0 0
+* Invalid deformation parameter   1
+ STARTDE 1 2 0 0
+ STARTDE 1 3 0 0
+ STARTDE 2 1 0 0
+ STARTDE 2 2 0 0
+ STARTDE 2 3 0 0
+  
+  
+  
+ END
+
+ NEO =    1, NEMM =    1, NEM =   11, NEC =   12.
+
+ NXO =    5, NXC =   16, NXMM =   18, NXM =   18.
+ WITHOUT EULER ELEMENTS, ACCORDING TO THE GRAPHICAL USER INTERFACE
+ NX  =   18, NEO  =    1, NXO =    5, NDOF=   12.
+ GRAVITY:   0.00000E+00  0.00000E+00  0.00000E+00
+
+ Element data (showing only non-zero values):
+    No Type     (K) Stiffness, (D) Damping, (M) Element mass, (S) Pre-stress
+   --- -------- -------------------------------------------------------------
+     1 Plbeam   K    0.13860E+05    0.28912E-01    0              0          
+                D    0.20000E-02    0.80000E-02    0              0          
+                M    0.15320E-02
+     2 Plbeam   K    0.21000E+05    0.10056E+00    0              0          
+                D    0.30303E-02    0.27826E-01    0              0          
+                M    0.15320E-02
+     3 Plbeam   K    0.19091E+05    0.10056E+00    0              0          
+                D    0.30303E-02    0.27826E-01    0              0          
+                M    0.15320E-02
+     4 Plbeam   K    0.18529E+05    0.91950E-01    0              0          
+                D    0.29412E-02    0.25443E-01    0              0          
+                M    0.15320E-02
+   --- -------- -------------------------------------------------------------
+
+ Nodal point forces
+  Node  Pos.par / value pairs
+  ---- ------------------------------------------------------------------------
+     1  17:  0            18:  0                                              
+     2   1:  0                                                                
+     3   6:  0             7:  0                                              
+     4   8:  0                                                                
+     5   2:  0             3:  0                                              
+     6   9:  0                                                                
+     7  10:  0            11:  0                                              
+     8  12:  0                                                                
+     9  13:  0            14:  0                                              
+    10  15:  0                                                                
+    11   4:  0             5:  0                                              
+    12  16:  0                                                                
+  ---- ------------------------------------------------------------------------
+
+ Nodal point mass
+  Node  Value 1           2           3           4           5           6   
+  ---- -----------------------------------------------------------------------
+     1  0           0           0           0           0           0         
+     2  0.5982E-11  0           0           0           0           0         
+     3  0           0           0           0           0           0         
+     4  0.5982E-11  0           0           0           0           0         
+     5  0           0           0           0           0           0         
+     6  0.3948E-11  0           0           0           0           0         
+     7  0           0           0           0           0           0         
+     8  0.7897E-11  0           0           0           0           0         
+     9  0           0           0           0           0           0         
+    10  0.8017E-11  0           0           0           0           0         
+    11  0           0           0           0           0           0         
+    12  0.4068E-11  0           0           0           0           0         
+  ---- -----------------------------------------------------------------------
+
+ Nodal point gyro
+  Node  Value 1           2           3           4           5   
+  ---- -----------------------------------------------------------
+     1  0           0           0           0           0         
+     2  0           0           0           0           0         
+     3  0           0           0           0           0         
+     4  0           0           0           0           0         
+     5  0           0           0           0           0         
+     6  0           0           0           0           0         
+     7  0           0           0           0           0         
+     8  0           0           0           0           0         
+     9  0           0           0           0           0         
+    10  0           0           0           0           0         
+    11  0           0           0           0           0         
+    12  0           0           0           0           0         
+  ---- -----------------------------------------------------------
+
+ Total mass of the system =   0.2298000E-02
+================================================================================
+
+ Zero order transfer function position parameters
+  0.00000E+00  0.00000E+00 -1.20000E+00  1.00000E+00 -1.20000E+00  5.00000E-01
+ -5.00000E-01  0.00000E+00  0.00000E+00  3.30000E-01 -1.20000E+00  0.00000E+00
+  6.60000E-01 -1.20000E+00  0.00000E+00  0.00000E+00  5.00000E-01  0.00000E+00
+
+
+ Zero order transfer function deformation parameters
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+
+================================================================================
+ Starting integration method "Shampine-Gordon"
+ With tolerances: Absolute  0.100E-04 and relative  0.100E-03.
+ Time =       0.00000000  total FE          0  delta fe     0
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00500000  total FE        927  delta fe   927
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.01000000  total FE       1803  delta fe   876
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.01500000  total FE       2703  delta fe   900
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02000000  total FE       3611  delta fe   908
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.02500000  total FE       4487  delta fe   876
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03000000  total FE       5428  delta fe   941
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.03500000  total FE       6265  delta fe   837
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ ERROR IN DRIVER, IFLAG=  5
+
+ Time =       0.04000000  total FE       7130  delta fe   865
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.04500000  total FE       7990  delta fe   860
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.05000000  total FE       8874  delta fe   884
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.05500000  total FE       9771  delta fe   897
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.06000000  total FE      10681  delta fe   910
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+

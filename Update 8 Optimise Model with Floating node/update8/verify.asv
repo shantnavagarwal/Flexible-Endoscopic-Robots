@@ -1,0 +1,12 @@
+function [f_x,f_y] = verify(depth,dist,k,lon_stiff,ben_stiff)
+    global tip_forcex
+    global tip_forcey
+    global k_val
+    k_val=k;
+    %foo=fopen('main_code.dat','w');
+    py.python_helper.func(depth,dist,)
+    %save main_code.dat x -ascii
+    spacar(1,'main_code');
+    f_x=tip_forcex;
+    f_y=tip_forcey;
+end

@@ -1,0 +1,829 @@
+SPACAR Huge     version 17-Jun-2015 (0008/DP/C2000/D700/E600/I40/O40).
+(c) Laboratory of Mechanical Automation, University of Twente &
+    Department of Engineering Mechanics, Delft University of Technology
+
+================================================================================
+ Kinematic data
+
+ PLBEAM 1 1 2 3 4
+ PLBEAM 2 5 6 7 8
+ PLBEAM 3 7 8 9 10
+ PLBEAM 4 9 10 11 12
+ X 1 0.5 -0.97
+ X 3 0.5 -0.995
+ X 5 0.0 -1
+ X 7 0.33 -1
+ X 9 0.66 -1
+ X 11 1.0 -1
+ FIX 2
+ FIX 5
+ FIX 11
+ INPUTX 1
+ DYNE 1 2 3
+ #DYNE 2 2 3
+ #DYNE 6 1 2 3
+ DYNE 2 1 2 3
+ DYNE 3 1 2 3
+ DYNE 4 2 3
+ RLSE 4 1
+ #DYNE 10 2 3
+ #RLSE 10 1
+ END
+
+ Elements used in this model:
+    No  Type         Element nodes          Deformation parameters (with type)    Max.def.par.
+   --- -------- ----------------------- ----------------------------------------------- -----
+     1 Plbeam     1   2   3   4           1-O   2-M   3-M                                   3
+     2 Plbeam     5   6   7   8           4-M   5-M   6-M                                   3
+     3 Plbeam     7   8   9  10           7-M   8-M   9-M                                   3
+     4 Plbeam     9  10  11  12          12-C  10-M  11-M                                   3
+   --- -------- ----------------------- ----------------------------------------------- -----
+
+ Bending-linked elongation calculated for beam(s):   1   2   3   4
+
+ Nodal point information
+  Node   Pos.pars (with type)    Values
+  ---- ----------------------- -----------------------------------------------
+     1  17-M  18-M                 0.50000    -0.97000                        
+     2   1-O                       0.00000                                    
+     3   6-C   7-C                 0.50000    -0.99500                        
+     4   8-C                       0.00000                                    
+     5   2-O   3-O                 0.00000    -1.00000                        
+     6   9-C                       0.00000                                    
+     7  10-C  11-C                 0.33000    -1.00000                        
+     8  12-C                       0.00000                                    
+     9  13-C  14-C                 0.66000    -1.00000                        
+    10  15-C                       0.00000                                    
+    11   4-O   5-O                 1.00000    -1.00000                        
+    12  16-C                       0.00000                                    
+  ---- ----------------------- -----------------------------------------------
+
+ Degree of freedom information:
+   DOF PosPar DefPar Type     
+   --- ------ ------ ---------
+     1     17        Input    
+     2     18        Input    
+     3             2 -Dynamic 
+     4             3 -Dynamic 
+     5             4 -Dynamic 
+     6             5 -Dynamic 
+     7             6 -Dynamic 
+     8             7 -Dynamic 
+     9             8 -Dynamic 
+    10             9 -Dynamic 
+    11            10 -Dynamic 
+    12            11 -Dynamic 
+   --- ------ ------ ---------
+ Condition number of Dcc:  0.1390E+03
+
+ Zero order transfer function position parameters
+  0.00000E+00  0.00000E+00 -1.00000E+00  1.00000E+00 -1.00000E+00  5.00000E-01
+ -9.95000E-01  0.00000E+00  0.00000E+00  3.30000E-01 -1.00000E+00  0.00000E+00
+  6.60000E-01 -1.00000E+00  0.00000E+00  0.00000E+00  5.00000E-01 -9.70000E-01
+
+
+ Zero order transfer function deformation parameters
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+
+================================================================================
+ Dynamic data
+
+ HALT
+ EM 1 0.001532   0.00000000002393
+ EM 2 0.001532   0.00000000002393
+ EM 3 0.001532   0.00000000002393
+ EM 4 0.001532   0.00000000002393
+ ESTIFF 1 6930  0.003614
+ ESTIFF 2 300 0.0001
+ ESTIFF 3 300 0.0001
+ ESTIFF 4 300 0.0001
+ EDAMP 1 0.001 0.001
+ EDAMP 2 0.001 0.001
+ EDAMP 3 0.001 0.001
+ EDAMP 4 0.001 0.001
+ INPUTX 1 1 0.5 0 0
+ INPUTX 1 2 -0.97 0 0
+ USERSIG CIRC_POT
+ USERSIG CIRC_POT
+ TIMESTEP 1 200
+ STARTDE 1 1 0 0
+* Invalid deformation parameter   1
+ STARTDE 1 2 0 0
+ STARTDE 1 3 0 0
+ STARTDE 2 1 0 0
+ STARTDE 2 2 0 0
+ STARTDE 2 3 0 0
+ END
+
+ NEO =    1, NEMM =    1, NEM =   11, NEC =   12.
+
+ NXO =    5, NXC =   16, NXMM =   18, NXM =   18.
+ WITHOUT EULER ELEMENTS, ACCORDING TO THE GRAPHICAL USER INTERFACE
+ NX  =   18, NEO  =    1, NXO =    5, NDOF=   12.
+ GRAVITY:   0.00000E+00  0.00000E+00  0.00000E+00
+
+ Element data (showing only non-zero values):
+    No Type     (K) Stiffness, (D) Damping, (M) Element mass, (S) Pre-stress
+   --- -------- -------------------------------------------------------------
+     1 Plbeam   K    0.27720E+06    0.23130E+03    0              0          
+                D    0.40000E-01    0.64000E+02    0              0          
+                M    0.15320E-02
+     2 Plbeam   K    0.90909E+03    0.27826E-02    0              0          
+                D    0.30303E-02    0.27826E-01    0              0          
+                M    0.15320E-02
+     3 Plbeam   K    0.90909E+03    0.27826E-02    0              0          
+                D    0.30303E-02    0.27826E-01    0              0          
+                M    0.15320E-02
+     4 Plbeam   K    0.88235E+03    0.25443E-02    0              0          
+                D    0.29412E-02    0.25443E-01    0              0          
+                M    0.15320E-02
+   --- -------- -------------------------------------------------------------
+
+ Nodal point forces
+  Node  Pos.par / value pairs
+  ---- ------------------------------------------------------------------------
+     1  17:  0            18:  0                                              
+     2   1:  0                                                                
+     3   6:  0             7:  0                                              
+     4   8:  0                                                                
+     5   2:  0             3:  0                                              
+     6   9:  0                                                                
+     7  10:  0            11:  0                                              
+     8  12:  0                                                                
+     9  13:  0            14:  0                                              
+    10  15:  0                                                                
+    11   4:  0             5:  0                                              
+    12  16:  0                                                                
+  ---- ------------------------------------------------------------------------
+
+ Nodal point mass
+  Node  Value 1           2           3           4           5           6   
+  ---- -----------------------------------------------------------------------
+     1  0           0           0           0           0           0         
+     2  0.2991E-12  0           0           0           0           0         
+     3  0           0           0           0           0           0         
+     4  0.2991E-12  0           0           0           0           0         
+     5  0           0           0           0           0           0         
+     6  0.3948E-11  0           0           0           0           0         
+     7  0           0           0           0           0           0         
+     8  0.7897E-11  0           0           0           0           0         
+     9  0           0           0           0           0           0         
+    10  0.8017E-11  0           0           0           0           0         
+    11  0           0           0           0           0           0         
+    12  0.4068E-11  0           0           0           0           0         
+  ---- -----------------------------------------------------------------------
+
+ Nodal point gyro
+  Node  Value 1           2           3           4           5   
+  ---- -----------------------------------------------------------
+     1  0           0           0           0           0         
+     2  0           0           0           0           0         
+     3  0           0           0           0           0         
+     4  0           0           0           0           0         
+     5  0           0           0           0           0         
+     6  0           0           0           0           0         
+     7  0           0           0           0           0         
+     8  0           0           0           0           0         
+     9  0           0           0           0           0         
+    10  0           0           0           0           0         
+    11  0           0           0           0           0         
+    12  0           0           0           0           0         
+  ---- -----------------------------------------------------------
+
+ Total mass of the system =   0.1570300E-02
+================================================================================
+
+ Zero order transfer function position parameters
+  0.00000E+00  0.00000E+00 -1.00000E+00  1.00000E+00 -1.00000E+00  5.00000E-01
+ -9.95000E-01  0.00000E+00  0.00000E+00  3.30000E-01 -1.00000E+00  0.00000E+00
+  6.60000E-01 -1.00000E+00  0.00000E+00  0.00000E+00  5.00000E-01 -9.70000E-01
+
+
+ Zero order transfer function deformation parameters
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+
+================================================================================
+ Starting integration method "Shampine-Gordon"
+ With tolerances: Absolute  0.100E-04 and relative  0.100E-03.
+ Time =       0.00000000  total FE          0  delta fe     0
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ ERROR IN DRIVER, IFLAG=  4
+
+ Time =       0.00500000  total FE       1085  delta fe  1085
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.01000000  total FE       1086  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.01500000  total FE       1087  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.02000000  total FE       1088  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.02500000  total FE       1089  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.03000000  total FE       1090  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.03500000  total FE       1091  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.04000000  total FE       1092  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.04500000  total FE       1093  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.05000000  total FE       1094  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.05500000  total FE       1095  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.06000000  total FE       1096  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.06500000  total FE       1097  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.07000000  total FE       1098  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.07500000  total FE       1099  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.08000000  total FE       1100  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.08500000  total FE       1101  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.09000000  total FE       1102  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.09500000  total FE       1103  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.10000000  total FE       1104  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.10500000  total FE       1105  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.11000000  total FE       1106  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.11500000  total FE       1107  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.12000000  total FE       1108  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.12500000  total FE       1109  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.13000000  total FE       1110  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.13500000  total FE       1111  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.14000000  total FE       1112  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.14500000  total FE       1113  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.15000000  total FE       1114  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.15500000  total FE       1115  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.16000000  total FE       1116  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.16500000  total FE       1117  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.17000000  total FE       1118  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.17500000  total FE       1119  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.18000000  total FE       1120  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.18500000  total FE       1121  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.19000000  total FE       1122  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.19500000  total FE       1123  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.20000000  total FE       1124  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.20500000  total FE       1125  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.21000000  total FE       1126  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.21500000  total FE       1127  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.22000000  total FE       1128  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.22500000  total FE       1129  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.23000000  total FE       1130  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.23500000  total FE       1131  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.24000000  total FE       1132  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.24500000  total FE       1133  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.25000000  total FE       1134  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.25500000  total FE       1135  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.26000000  total FE       1136  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.26500000  total FE       1137  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.27000000  total FE       1138  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.27500000  total FE       1139  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.28000000  total FE       1140  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.28500000  total FE       1141  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.29000000  total FE       1142  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.29500000  total FE       1143  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.30000000  total FE       1144  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.30500000  total FE       1145  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.31000000  total FE       1146  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.31500000  total FE       1147  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.32000000  total FE       1148  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.32500000  total FE       1149  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.33000000  total FE       1150  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.33500000  total FE       1151  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.34000000  total FE       1152  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.34500000  total FE       1153  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.35000000  total FE       1154  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.35500000  total FE       1155  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.36000000  total FE       1156  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.36500000  total FE       1157  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.37000000  total FE       1158  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.37500000  total FE       1159  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.38000000  total FE       1160  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.38500000  total FE       1161  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.39000000  total FE       1162  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.39500000  total FE       1163  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.40000000  total FE       1164  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.40500000  total FE       1165  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.41000000  total FE       1166  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.41500000  total FE       1167  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.42000000  total FE       1168  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.42500000  total FE       1169  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.43000000  total FE       1170  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.43500000  total FE       1171  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.44000000  total FE       1172  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.44500000  total FE       1173  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.45000000  total FE       1174  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.45500000  total FE       1175  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.46000000  total FE       1176  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.46500000  total FE       1177  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.47000000  total FE       1178  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.47500000  total FE       1179  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.48000000  total FE       1180  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.48500000  total FE       1181  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.49000000  total FE       1182  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.49500000  total FE       1183  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.50000000  total FE       1184  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.50500000  total FE       1185  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.51000000  total FE       1186  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.51500000  total FE       1187  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.52000000  total FE       1188  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.52500000  total FE       1189  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.53000000  total FE       1190  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.53500000  total FE       1191  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.54000000  total FE       1192  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.54500000  total FE       1193  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.55000000  total FE       1194  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.55500000  total FE       1195  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.56000000  total FE       1196  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.56500000  total FE       1197  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.57000000  total FE       1198  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.57500000  total FE       1199  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.58000000  total FE       1200  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.58500000  total FE       1201  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.59000000  total FE       1202  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.59500000  total FE       1203  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.60000000  total FE       1204  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.60500000  total FE       1205  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.61000000  total FE       1206  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.61500000  total FE       1207  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.62000000  total FE       1208  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.62500000  total FE       1209  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.63000000  total FE       1210  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.63500000  total FE       1211  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.64000000  total FE       1212  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.64500000  total FE       1213  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.65000000  total FE       1214  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.65500000  total FE       1215  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.66000000  total FE       1216  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.66500000  total FE       1217  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.67000000  total FE       1218  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.67500000  total FE       1219  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.68000000  total FE       1220  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.68500000  total FE       1221  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.69000000  total FE       1222  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.69500000  total FE       1223  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.70000000  total FE       1224  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.70500000  total FE       1225  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.71000000  total FE       1226  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.71500000  total FE       1227  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.72000000  total FE       1228  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.72500000  total FE       1229  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.73000000  total FE       1230  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.73500000  total FE       1231  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.74000000  total FE       1232  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.74500000  total FE       1233  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.75000000  total FE       1234  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.75500000  total FE       1235  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.76000000  total FE       1236  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.76500000  total FE       1237  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.77000000  total FE       1238  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.77500000  total FE       1239  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.78000000  total FE       1240  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.78500000  total FE       1241  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.79000000  total FE       1242  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.79500000  total FE       1243  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.80000000  total FE       1244  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.80500000  total FE       1245  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.81000000  total FE       1246  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.81500000  total FE       1247  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.82000000  total FE       1248  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.82500000  total FE       1249  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.83000000  total FE       1250  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.83500000  total FE       1251  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.84000000  total FE       1252  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.84500000  total FE       1253  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.85000000  total FE       1254  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.85500000  total FE       1255  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.86000000  total FE       1256  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.86500000  total FE       1257  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.87000000  total FE       1258  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.87500000  total FE       1259  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.88000000  total FE       1260  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.88500000  total FE       1261  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.89000000  total FE       1262  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.89500000  total FE       1263  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.90000000  total FE       1264  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.90500000  total FE       1265  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.91000000  total FE       1266  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.91500000  total FE       1267  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.92000000  total FE       1268  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.92500000  total FE       1269  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.93000000  total FE       1270  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.93500000  total FE       1271  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.94000000  total FE       1272  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.94500000  total FE       1273  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.95000000  total FE       1274  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.95500000  total FE       1275  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.96000000  total FE       1276  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.96500000  total FE       1277  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.97000000  total FE       1278  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.97500000  total FE       1279  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.98000000  total FE       1280  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.98500000  total FE       1281  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.99000000  total FE       1282  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       0.99500000  total FE       1283  delta fe     1
+ ERROR IN DRIVER, IFLAG=  6
+
+ Time =       1.00000000  total FE       1284  delta fe     1
+================================================================================
