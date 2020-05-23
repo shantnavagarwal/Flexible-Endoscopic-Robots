@@ -1,0 +1,485 @@
+Library {
+  Name			  "spacar_lib"
+  Version		  3.00
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  off
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon May 14 14:19:24 2001"
+  Creator		  "AartsRGKM"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "aarts"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Sep 09 22:00:00 2010"
+  LastModifiedBy	  "AartsRGKM"
+  ModelVersionFormat	  "1.%<AutoIncrement:8>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "spacar_lib"
+    Location		    [19, 61, 231, 341]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "LTV"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [125, 34, 160, 76]
+      ShowPortLabels	      on
+      MaskPromptString	      "SPACAR data filename|Interpolation type|Number "
+"of modes (-1 for all)"
+      MaskStyleString	      "edit,popup(Stepwise|Linear),edit"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskVariables	      "filenm=@1;imode=@2;nmodes=@3;"
+      MaskInitialization      "if size(who('filenm'))>0; dfilenm=filenm; else;"
+" dfilenm=''; end; if nmodes>0; dfilenm=[ dfilenm '\\n(' num2str(nmodes) ' mod"
+"es)']; end;"
+      MaskDisplay	      "disp(dfilenm);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "|Linear|-1"
+      System {
+	Name			"LTV"
+	Location		[364, 120, 604, 225]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [25, 33, 55, 47]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "LTV"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [80, 25, 140, 55]
+	  FunctionName		  "ltv"
+	  Parameters		  "filenm, [  0 imode-1 nmodes]"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [165, 33, 195, 47]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "LTV"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "LTV"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Reference Y0"
+      Ports		      [0, 1, 0, 0, 0]
+      Position		      [25, 180, 80, 210]
+      ShowPortLabels	      on
+      MaskPromptString	      "SPACAR data filename|Interpolation type"
+      MaskStyleString	      "edit,popup(Stepwise|Linear|Spline)"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskVariables	      "filenm=@1;imode=@2;"
+      MaskInitialization      "if size(who('filenm'))>0; dfilenm=filenm; else;"
+" dfilenm=''; end"
+      MaskDisplay	      " disp(dfilenm);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "|Spline"
+      System {
+	Name			"Reference Y0"
+	Location		[504, 439, 712, 537]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Y ref"
+	  Ports			  [0, 1, 0, 0, 0]
+	  Position		  [25, 25, 85, 55]
+	  FunctionName		  "ltv"
+	  Parameters		  "filenm, [12 imode-1]"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [110, 33, 140, 47]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Y ref"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "SPASIM"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [35, 34, 70, 76]
+      ShowPortLabels	      on
+      MaskPromptString	      "SPACAR data filename|Open graphical window|Write SBD file"
+      MaskStyleString	      "edit,checkbox,checkbox"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskToolTipString	      "on,on,on"
+      MaskVarAliasString      ",,"
+      MaskVariables	      "filenm=@1;plot=@2;sbdout=@3;"
+      MaskInitialization      "if size(who('filenm'))>0; dfilenm=filenm; else;"
+" dfilenm=''; end"
+      MaskDisplay	      " disp(dfilenm);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "|off|off"
+      System {
+	Name			"SPASIM"
+	Location		[15, 171, 255, 276]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [25, 33, 55, 47]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "SPASIM"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [80, 25, 140, 55]
+	  FunctionName		  "spasim"
+	  Parameters		  "filenm,plot,sbdout"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [165, 33, 195, 47]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "SPASIM"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SPASIM"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Setpoint Sigma0"
+      Ports		      [0, 1, 0, 0, 0]
+      Position		      [120, 110, 175, 140]
+      ShowPortLabels	      on
+      MaskPromptString	      "SPACAR data filename|Interpolation type"
+      MaskStyleString	      "edit,popup(Stepwise|Linear|Spline)"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskVariables	      "filenm=@1;imode=@2;"
+      MaskInitialization      "if size(who('filenm'))>0; dfilenm=filenm; else;"
+" dfilenm=''; end"
+      MaskDisplay	      " disp(dfilenm);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "|Spline"
+      System {
+	Name			"Setpoint Sigma0"
+	Location		[565, 275, 765, 374]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Sigma0"
+	  Ports			  [0, 1, 0, 0, 0]
+	  Position		  [25, 25, 85, 55]
+	  FunctionName		  "ltv"
+	  Parameters		  "filenm, [ 13 imode-1]"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [110, 33, 140, 47]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Sigma0"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Setpoint U0"
+      Ports		      [0, 1, 0, 0, 0]
+      Position		      [25, 110, 80, 140]
+      ShowPortLabels	      on
+      MaskPromptString	      "SPACAR data filename|Interpolation type"
+      MaskStyleString	      "edit,popup(Stepwise|Linear|Spline)"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskVariables	      "filenm=@1;imode=@2;"
+      MaskInitialization      "if size(who('filenm'))>0; dfilenm=filenm; else;"
+" dfilenm=''; end"
+      MaskDisplay	      " disp(dfilenm);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "|Spline"
+      System {
+	Name			"Setpoint U0"
+	Location		[367, 145, 570, 241]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "U0"
+	  Ports			  [0, 1, 0, 0, 0]
+	  Position		  [25, 25, 85, 55]
+	  FunctionName		  "ltv"
+	  Parameters		  "filenm, [ 11 imode-1]"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [110, 33, 140, 47]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "U0"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "times M0"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [130, 174, 165, 216]
+      ShowPortLabels	      on
+      MaskPromptString	      "SPACAR data filename|Interpolation type|Number "
+"of modes (-1 for all)"
+      MaskStyleString	      "edit,popup(Stepwise|Linear|Spline),edit"
+      MaskTunableValueString  "on,on,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskVariables	      "filenm=@1;imode=@2;nmodes=@3;"
+      MaskInitialization      "if size(who('filenm'))>0; dfilenm=filenm; else;"
+" dfilenm=''; end; if nmodes>0; dfilenm=[ dfilenm '\\n(' num2str(nmodes) ' mod"
+"es)']; end;"
+      MaskDisplay	      "disp(dfilenm);"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "|Spline|-1"
+      System {
+	Name			"times M0"
+	Location		[366, 122, 606, 227]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [25, 33, 55, 47]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "LTV"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [80, 25, 140, 55]
+	  FunctionName		  "ltv"
+	  Parameters		  "filenm, [  31 imode-1 nmodes]"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [165, 33, 195, 47]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "LTV"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "LTV"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
